@@ -1,0 +1,56 @@
+import java.util.Scanner;
+class EmployeDetails
+{
+    String name;
+    int age;
+    Float salary;
+    String designation;
+    Scanner in=new Scanner(System.in);
+    void create()
+    {
+        System.out.println("name");
+        name=in.next();
+        System.out.println("age");
+        age=in.nextInt();
+        System.out.println("salary");
+        salary=in.nextFloat();
+        System.out.println("designation");
+        designation=in.next();
+        
+    }
+    void display()
+    {
+        System.out.println("name : "+name+"age:"+age+"salary:"+salary+"designation:"+designation);
+    }
+    void salaryraise()
+    {
+        salary=salary+1500;
+        System.out.println("raised salary is:");
+    }
+}
+    class Main
+    {
+        public static void main (String[] args) {
+            EmployeDetails e=new EmployeDetails();
+            while(true)
+            {
+                Scanner in1=new Scanner(System.in);
+                System.out.println("1.create \n 2.display \n 3. salaryraise \n 4.exit");
+                int i=in1.nextInt();
+                if(i==4)
+                {
+                    break;
+                }
+                switch(i)
+                {
+                    case 1: e.create();
+                            break;
+                    case 2: e.display();
+                            break;
+                    case 3: e.salaryraise();
+                            break;
+                }
+            }
+            
+        }
+    }

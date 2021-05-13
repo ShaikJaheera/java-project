@@ -1,0 +1,91 @@
+The aim of the program is to print the following patter
+         *
+        ***
+       *****
+
+import java.util.*; 
+
+Java util package contains collection framework, collection classes, on importing this package, we can access all these classes and methods.
+
+public class Demo
+{
+  The Demo class is created.
+  
+int row, i, j, space = 1;  
+row, i, j are declared as int datatype and sapce is intialized with 1
+
+System.out.print("Enter the number of rows you want to print: ");  
+to take input from the user (ie) the number rows the user want is taken by println
+
+ Scanner sc = new Scanner(System.in); 
+to takes the no of  rows from the user we have used scanner classes
+
+ space = row - 1;  
+ space taken should be less than row
+ 
+for (i = 1; i<= space; i++)  
+{ 
+        System.out.print(" ");
+}
+this part of the code is used to check the spaces before and after the *, 
+
+for (i = 1; i <= 2 * j - 1; i++)  
+{  
+        System.out.print("*");  
+}  
+this part of the code to print * pattren
+
+
+for (j = 1; j<= row; j++)  
+        {  
+            for (i = 1; i<= space; i++)  
+            {  
+                System.out.print(" ");  
+            }  
+            space--;  
+            for (i = 1; i <= 2 * j - 1; i++)  
+            {  
+                System.out.print("*");  
+            }  
+            System.out.println("");  
+        }  
+       
+first j=1 if it is less than row size then it enters in to the space code 
+it checks for space i is greater than space then loop exist and space will be reduced 
+then to print the star pattern  i <= 2 * j - 1 itt checks the condition if it false then it comes out of loop
+
+
+output:
+enter no of rows:
+3
+then j=1, 1<=3 is true it enters into the space loop
+i=1, 1<=1 
+space is given
+space--
+then for star
+i=1,i<2*1-1 that is i=1
+1 star is printed 
+        *
+
+j is incremented then j=2, 2<=3 true
+ i=2, 2<=2
+ space is reduced 
+ space--
+ i=2,i<2*2-1 that is i=3
+ 3 stars are printed
+        ***
+  
+j is incremented j=3, 3<=3 true
+i=3, 3<=3
+ space is reduced 
+ space--
+ i=3,i<2*3-1 that is i=5
+ 5 stars are printed
+        *****
+  j is incremented j=4, 4<=3 false exists out of loop and prints the output
+                
+                         *
+                        ***
+                       *****
+
+
